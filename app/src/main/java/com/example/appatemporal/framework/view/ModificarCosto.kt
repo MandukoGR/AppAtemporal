@@ -35,6 +35,9 @@ class ModificarCosto : AppCompatActivity() {
                 viewModel.updateCosto(costo, repository)
             }
             val intent = Intent(this, DeleteCosto::class.java)
+            with(intent){
+                putExtra("id_proyecto", idProyecto)
+            }
             startActivity(intent)
         }
 

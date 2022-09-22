@@ -61,6 +61,9 @@ class CostoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
                     viewModel.removeCosto(costoModel, repository)
                     //Toast.makeText(itemView.context, "Proyecto eliminado", Toast.LENGTH_SHORT).show()
                 }
+                with(intent){
+                    putExtra("id_proyecto", costoModel.id_proyecto)
+                }
                 itemView.context.startActivity(intent)
 
 
